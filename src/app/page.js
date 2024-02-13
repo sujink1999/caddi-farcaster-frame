@@ -24,3 +24,7 @@ export const metadata = {
     ...frameMetadata,
   },
 };
+
+export default function Page() {
+  return <h1>Page 0</h1>;
+}
