@@ -4,12 +4,13 @@ async function getResponse(req) {
   const searchParams = req.nextUrl.searchParams;
   const id = searchParams.get("id");
   const idAsNumber = parseInt(id);
+  const nextId = id + 1;
 
   if (idAsNumber === 4) {
     return new NextResponse(`<!DOCTYPE html><html><head>
   <title>This is frame 7</title>
   <meta property="fc:frame" content="vNext" />
-  <meta property="fc:frame:image" content="${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/Qme4FXhoxHHfyzTfRxSpASbMF8kajLEPkRQWhwWu9pkUjm/7.png" />
+  <meta property="fc:frame:image" content="${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/Qme4FXhoxHHfyzTfRxSpASbMF8kajLEPkRQWhwWu9pkUjm/frame4.png" />
   <meta property="fc:frame:button:1" content="Cosmic Cowboys" />
   <meta property="fc:frame:button:1:action" content="post_redirect" />
   <meta property="fc:frame:button:2" content="Blog post Tutorial" />
