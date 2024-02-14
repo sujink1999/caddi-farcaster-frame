@@ -4,7 +4,7 @@ async function getResponse(req) {
   const searchParams = req.nextUrl.searchParams;
   const id = searchParams.get("id");
   const idAsNumber = parseInt(id);
-  const nextId = id + 1;
+  const nextId = idAsNumber + 1;
 
   if (idAsNumber === 4) {
     return new NextResponse(`<!DOCTYPE html><html><head>
@@ -31,6 +31,10 @@ async function getResponse(req) {
 }
 
 export async function POST(req) {
+  return getResponse(req);
+}
+
+export async function GET(req) {
   return getResponse(req);
 }
 
