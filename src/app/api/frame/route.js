@@ -36,7 +36,7 @@ async function getResponse(req) {
     return new NextResponse(`<!DOCTYPE html><html><head>
   <title>This is the final frame </title>
   <meta property="fc:frame" content="vNext" />
-  <meta property="fc:frame:image" content="${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/QmNpypEw4JnKAZF6aeinPMpLWByrdzyUdRAn4iw2nZemQT/final.png" />
+  <meta property="fc:frame:image" content="${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/QmQy1i7jdu525cuLt77CBZtBtXumQEWe2Kn4HnK8Nis83G/final.png" />
   <meta property="fc:frame:button:1" content="What is IYKYK?" />
   <meta property="fc:frame:button:2" content="DM @Jaimin" />
   <meta property="fc:frame:button:2:action" content="post_redirect" />
@@ -46,7 +46,7 @@ async function getResponse(req) {
     return new NextResponse(`<!DOCTYPE html><html><head>
     <title>This is frame ${id}</title>
     <meta property="fc:frame" content="vNext" />
-    <meta property="fc:frame:image" content="${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/QmNpypEw4JnKAZF6aeinPMpLWByrdzyUdRAn4iw2nZemQT/${filename}" />
+    <meta property="fc:frame:image" content="${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/QmQy1i7jdu525cuLt77CBZtBtXumQEWe2Kn4HnK8Nis83G/${filename}" />
     <meta property="fc:frame:button:1" content="${buttonText}" />
     <meta property="fc:frame:button:2" content="Gimme Red Packet 🧧" />
     <meta property="fc:frame:post_url" content="${process.env.NEXT_PUBLIC_BASE_URL}/api/frame?id=${nextId}" />
@@ -55,10 +55,6 @@ async function getResponse(req) {
 }
 
 export async function POST(req) {
-  return getResponse(req);
-}
-
-export async function GET(req) {
   return getResponse(req);
 }
 
