@@ -3,7 +3,7 @@ import { getFrameMetadata } from "@coinbase/onchainkit";
 const frameMetadata = getFrameMetadata({
   buttons: [
     {
-      label: "Don't Know",
+      label: "What is it?",
     },
   ],
   image: `${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/QmQy1i7jdu525cuLt77CBZtBtXumQEWe2Kn4HnK8Nis83G/banner.png`,
