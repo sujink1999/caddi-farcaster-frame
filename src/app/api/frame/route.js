@@ -15,7 +15,7 @@ const filenames = [
 ];
 
 async function getResponse(req) {
-  // const data = await req.json();
+  const data = await req.json();
 
   const searchParams = req.nextUrl.searchParams;
   const id = searchParams.get("id");
@@ -23,7 +23,7 @@ async function getResponse(req) {
 
   const filename = filenames[idAsNumber];
   const buttonText = buttonTexts[idAsNumber - 1];
-  const buttonId = 1; // data.untrustedData.buttonIndex;
+  const buttonId = data.untrustedData.buttonIndex;
   const isFinal = buttonId === 2 || idAsNumber === 5;
 
   if (isFinal) {
