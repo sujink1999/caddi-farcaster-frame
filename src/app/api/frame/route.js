@@ -26,6 +26,10 @@ async function getResponse(req) {
   const buttonId = data.untrustedData.buttonIndex;
   const isFinal = buttonId === 2 || idAsNumber === 5;
 
+  if (buttonId === 1 && idAsNumber > 3) {
+    idAsNumber = 1;
+  }
+
   if (isFinal) {
     idAsNumber = 5;
   }
