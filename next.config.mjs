@@ -5,7 +5,7 @@ const nextConfig = {
     return [
       {
         source: "/jaimin",
-        destination: "https://docs.farcaster.xyz/reference/frames/spec",
+        destination: "https://t.me/jaimin_building",
         permanent: false,
       },
     ];
