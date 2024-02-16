@@ -50,6 +50,8 @@ async function getResponse(req) {
     <meta property="fc:frame:button:1" content="${buttonText}" />
     <meta property="fc:frame:button:2" content="Gimme Red Packet 🧧" />
     <meta property="fc:frame:post_url" content="${process.env.NEXT_PUBLIC_BASE_URL}/api/frame?id=${nextId}" />
+    <meta property="og:image" content="${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/QmQy1i7jdu525cuLt77CBZtBtXumQEWe2Kn4HnK8Nis83G/${filename}" />
+    <meta property="og:title" content="This is frame ${id}" />
   </head></html>`);
   }
 }
