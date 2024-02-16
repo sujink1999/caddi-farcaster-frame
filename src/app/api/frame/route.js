@@ -9,7 +9,7 @@ const filenames = [
   "banner.png",
   "security.gif",
   "alpha-sharing.gif",
-  "error-reporting",
+  "error-reporting.gif",
   "discover.gif",
   "final.png",
 ];
