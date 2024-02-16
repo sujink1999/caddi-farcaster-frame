@@ -17,6 +17,12 @@ export const metadata = {
     title: "Caddi Dragon Red Packets",
     description: "Caddi Year of the Dragon Giveaway",
     image: `${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/QmQy1i7jdu525cuLt77CBZtBtXumQEWe2Kn4HnK8Nis83G/banner.png`,
+
+    images: [
+      {
+        url: `${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/QmQy1i7jdu525cuLt77CBZtBtXumQEWe2Kn4HnK8Nis83G/banner.png`,
+      },
+    ],
   },
   other: {
     ...frameMetadata,
