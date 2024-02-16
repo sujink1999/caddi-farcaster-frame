@@ -5,15 +5,11 @@ export async function POST(req) {
   console.log(data);
   const buttonId = data.untrustedData.buttonIndex;
 
-  let path;
+  let redirectURL = "";
   if (buttonId === 1) {
-    path = "cosmiccowboys";
+    redirectURL = `${process.env.NEXT_PUBLIC_BASE_URL}/api/frame?id=1`;
   } else if (buttonId === 2) {
-    path = "pinatacloud";
-  } else if (buttonId === 3) {
-    path = "video";
-  } else {
-    path = "";
+    redirectURL = `${process.env.NEXT_PUBLIC_BASE_URL}/jaimin`;
   }
   const headers = new Headers();
   headers.set("Location", `${process.env.NEXT_PUBLIC_BASE_URL}/`);

@@ -1,30 +1,54 @@
 import { NextResponse } from "next/server";
+const buttonTexts = [
+  "Alpha Sharing",
+  "Error Reporting",
+  "Discover",
+  "What is IYKYK?",
+];
+const filenames = [
+  "banner.png",
+  "security.gif",
+  "alpha-sharing.gif",
+  "error-reporting",
+  "discover.gif",
+  "final.png",
+];
 
 async function getResponse(req) {
+  const data = await req.json();
+
   const searchParams = req.nextUrl.searchParams;
   const id = searchParams.get("id");
-  const idAsNumber = parseInt(id);
+  let idAsNumber = parseInt(id);
+
+  const filename = filenames[idAsNumber];
+  const buttonText = buttonTexts[idAsNumber - 1];
+  const buttonId = data.untrustedData.buttonIndex;
+  const isFinal = buttonId === 2 || idAsNumber === 5;
+
+  if (isFinal) {
+    idAsNumber = 5;
+  }
+
   const nextId = idAsNumber + 1;
 
-  if (idAsNumber === 4) {
+  if (isFinal) {
     return new NextResponse(`<!DOCTYPE html><html><head>
-  <title>This is frame 7</title>
+  <title>This is the final frame </title>
   <meta property="fc:frame" content="vNext" />
-  <meta property="fc:frame:image" content="${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/QmNpypEw4JnKAZF6aeinPMpLWByrdzyUdRAn4iw2nZemQT/frame4.png" />
-  <meta property="fc:frame:button:1" content="Cosmic Cowboys" />
-  <meta property="fc:frame:button:1:action" content="post_redirect" />
-  <meta property="fc:frame:button:2" content="Blog post Tutorial" />
+  <meta property="fc:frame:image" content="${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/QmNpypEw4JnKAZF6aeinPMpLWByrdzyUdRAn4iw2nZemQT/final.png" />
+  <meta property="fc:frame:button:1" content="What is IYKYK?" />
+  <meta property="fc:frame:button:2" content="DM @Jaimin" />
   <meta property="fc:frame:button:2:action" content="post_redirect" />
-  <meta property="fc:frame:button:3" content="Video Tutorial" />
-  <meta property="fc:frame:button:3:action" content="post_redirect" />
   <meta property="fc:frame:post_url" content="${process.env.NEXT_PUBLIC_BASE_URL}/api/end" />
 </head></html>`);
   } else {
     return new NextResponse(`<!DOCTYPE html><html><head>
     <title>This is frame ${id}</title>
     <meta property="fc:frame" content="vNext" />
-    <meta property="fc:frame:image" content="${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/QmNpypEw4JnKAZF6aeinPMpLWByrdzyUdRAn4iw2nZemQT/frame${id}.png" />
-    <meta property="fc:frame:button:1" content="Next Page" />
+    <meta property="fc:frame:image" content="${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/QmNpypEw4JnKAZF6aeinPMpLWByrdzyUdRAn4iw2nZemQT/${filename}" />
+    <meta property="fc:frame:button:1" content="${buttonText}" />
+    <meta property="fc:frame:button:2" content="Gimme Red Packet 🧧" />
     <meta property="fc:frame:post_url" content="${process.env.NEXT_PUBLIC_BASE_URL}/api/frame?id=${nextId}" />
   </head></html>`);
   }

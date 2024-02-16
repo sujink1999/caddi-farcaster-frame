@@ -3,21 +3,21 @@ import { getFrameMetadata } from "@coinbase/onchainkit";
 const frameMetadata = getFrameMetadata({
   buttons: [
     {
-      label: "Begin",
+      label: "Don't Know",
     },
   ],
-  image: `${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/QmNpypEw4JnKAZF6aeinPMpLWByrdzyUdRAn4iw2nZemQT/frame1.png`,
-  post_url: `${process.env.NEXT_PUBLIC_BASE_URL}/api/frame?id=2`,
+  image: `${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/QmNpypEw4JnKAZF6aeinPMpLWByrdzyUdRAn4iw2nZemQT/banner.png`,
+  post_url: `${process.env.NEXT_PUBLIC_BASE_URL}/api/frame?id=1`,
 });
 
 export const metadata = {
-  title: "Caddi Dragon",
-  description: "A frame for the caddi year of dragon",
+  title: "Caddi Dragon Red Packets",
+  description: "Caddi Year of the Dragon Giveaway",
   openGraph: {
-    title: "Caddi Dragon",
-    description: "A frame for the caddi year of dragon",
+    title: "Caddi Dragon Red Packets",
+    description: "Caddi Year of the Dragon Giveaway",
     image: [
-      `${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/QmNpypEw4JnKAZF6aeinPMpLWByrdzyUdRAn4iw2nZemQT/frame1.png`,
+      `${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/QmNpypEw4JnKAZF6aeinPMpLWByrdzyUdRAn4iw2nZemQT/banner.png`,
     ],
   },
   other: {
