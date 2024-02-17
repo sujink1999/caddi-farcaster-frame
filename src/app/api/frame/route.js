@@ -1,15 +1,10 @@
 import { NextResponse } from "next/server";
-const buttonTexts = [
-  "Alpha Sharing",
-  "Error Reporting",
-  "Discover",
-  "What is it?",
-];
+const buttonTexts = ["Security", "Alpha Sharing", "Discover", "What is it?"];
 const filenames = [
   "banner.png",
+  "error-reporting.gif",
   "security.gif",
   "alpha-sharing.gif",
-  "error-reporting.gif",
   "discover.gif",
   "final.png",
 ];
