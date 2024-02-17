@@ -3,7 +3,7 @@ const buttonTexts = [
   "Alpha Sharing",
   "Error Reporting",
   "Discover",
-  "What is IYKYK?",
+  "What is it?",
 ];
 const filenames = [
   "banner.png",

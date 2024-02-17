@@ -5,7 +5,7 @@ const nextConfig = {
     return [
       {
         source: "/jaimin",
-        destination: "https://t.me/jaimin_building",
+        destination: "https://warpcast.com/jaimin",
         permanent: false,
       },
     ];
