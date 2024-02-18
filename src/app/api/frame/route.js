@@ -16,8 +16,6 @@ async function getResponse(req) {
   const id = searchParams.get("id");
   let idAsNumber = parseInt(id);
 
-  const filename = filenames[idAsNumber];
-  const buttonText = buttonTexts[idAsNumber - 1];
   const buttonId = data.untrustedData.buttonIndex;
   const isFinal = buttonId === 2 || idAsNumber === 5;
 
@@ -28,6 +26,9 @@ async function getResponse(req) {
   if (isFinal) {
     idAsNumber = 5;
   }
+
+  const filename = filenames[idAsNumber];
+  const buttonText = buttonTexts[idAsNumber - 1];
 
   const nextId = idAsNumber + 1;
 
