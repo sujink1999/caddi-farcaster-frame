@@ -35,7 +35,7 @@ async function getResponse(req) {
     return new NextResponse(`<!DOCTYPE html><html><head>
   <title>This is the final frame </title>
   <meta property="fc:frame" content="vNext" />
-  <meta property="fc:frame:image" content="${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/QmQy1i7jdu525cuLt77CBZtBtXumQEWe2Kn4HnK8Nis83G/final.png" />
+  <meta property="fc:frame:image" content="${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/Qmd6ULUWJwLGs3VSFYgCfvGv2PYgm9bTVT3qo3cA7v4nen/${filename}" />
   <meta property="fc:frame:button:1" content="What is IYKYK?" />
   <meta property="fc:frame:button:2" content="DM @Jaimin" />
   <meta property="fc:frame:button:2:action" content="post_redirect" />
